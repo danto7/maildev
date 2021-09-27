@@ -44,14 +44,16 @@ module.exports = function (config) {
     config.outgoingPort ||
     config.outgoingUser ||
     config.outgoingPass ||
-    config.outgoingSecure
+    config.outgoingSecure ||
+    config.outgoingOverideFrom
   ) {
     mailserver.setupOutgoing(
       config.outgoingHost,
       parseInt(config.outgoingPort),
       config.outgoingUser,
       config.outgoingPass,
-      config.outgoingSecure
+      config.outgoingSecure,
+      config.outgoingOverideFrom
     )
   }
 
